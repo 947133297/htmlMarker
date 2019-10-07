@@ -1,0 +1,21 @@
+{
+  "manifest_version": 2,
+  "name": "简易版网页备注工具",
+  "description": "使用方式详见 readme.md",
+  "version": "0.1",
+  "permissions": [
+    "storage"
+  ],
+  "content_security_policy": "script-src 'self'; object-src 'self'",
+  "content_scripts":
+  [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["lib/jq.js","lib/layer/layer.js","js/app.js"],
+      "css": ["lib/layer/theme/default/layer.css"],
+      "run_at": "document_idle"
+    }
+  ]
+}
+
+// 参考：https://www.cnblogs.com/liuxianan/p/chrome-plugin-develop.html
