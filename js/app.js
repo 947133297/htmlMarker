@@ -219,6 +219,7 @@
                 layer.prompt({
                     formType: 2,
                     value: val.xdata || "",
+					maxlength: 999999999, //可输入文本的最大长度，默认500
                     title: '本地记事本',
                     area: ['800px', '500px']
                 }, function (val, index) {
